@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ClassType {
+  id          String   @id @default(cuid())
+  name        String
+  subject     String
+  grade       String
+  hourlyRate  Float
+  color       String   @default("#6366f1")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  sessions    TeachingSession[]
+}
+
+model TeachingSession {
+  id          String   @id @default(cuid())
+  classTypeId String
+  date        DateTime
+  startTime   String
+  endTime     String
+  hours       Float
+  income      Float
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  classType   ClassType @relation(fields: [classTypeId], references: [id], onDelete: Cascade)
+}
+
+model Expense {
+  id          String   @id @default(cuid())
+  date        DateTime
+  amount      Float
+  category    String
+  description String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Investment {
+  id          String   @id @default(cuid())
+  name        String
+  type        String
+  amount      Float
+  currentValue Float
+  purchaseDate DateTime
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
