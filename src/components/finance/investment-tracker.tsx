@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { Badge } from '@/components/ui/badge'
-import { Plus, Trash2, Edit2, TrendingUp, TrendingDown, Banknote, BarChart3, TrendingFlat } from 'lucide-react'
+import { Plus, Trash2, Edit2, TrendingUp, TrendingDown, Banknote, BarChart3, PackageOpen } from 'lucide-react'
 import { format } from 'date-fns'
 import { toast } from 'sonner'
 import {
@@ -192,7 +192,7 @@ export function InvestmentTracker() {
             <div className="max-h-[500px] overflow-y-auto">
               {investments.length === 0 ? (
                 <div className="p-8 text-center text-muted-foreground">
-                  <TrendingFlat className="h-10 w-10 mx-auto mb-2 text-muted-foreground/50" />
+                  <PackageOpen className="h-10 w-10 mx-auto mb-2 text-muted-foreground/50" />
                   <p>No investments yet. Start building your portfolio!</p>
                 </div>
               ) : (
