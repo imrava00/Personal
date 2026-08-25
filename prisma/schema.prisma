@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Schedule {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  date        DateTime
+  time        String?
+  category    String   @default("general")
+  completed   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Transaction {
+  id          String   @id @default(cuid())
+  type        String   // "income" or "expense"
+  amount      Float
+  category    String
+  description String?
+  date        DateTime
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model FinancialGoal {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  targetAmount Float
+  currentAmount Float  @default(0)
+  deadline    DateTime?
+  category    String   @default("savings")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model BudgetPlan {
+  id          String   @id @default(cuid())
+  category    String
+  monthlyLimit Float
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
