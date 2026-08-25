@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "FinPlan — Personal Finance Hub",
   description: "Track schedules, manage income & expenses, and plan your financial goals — all in one place.",
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230d9488'/><text x='50' y='68' font-size='55' font-family='system-ui' font-weight='bold' text-anchor='middle' fill='white'>F</text></svg>",
   },
 };
 

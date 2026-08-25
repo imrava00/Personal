@@ -4,8 +4,8 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-    relationMode = "prisma"
   url      = env("DATABASE_URL")
+  relationMode = "prisma"
 }
 
 model Schedule {
@@ -22,7 +22,7 @@ model Schedule {
 
 model Transaction {
   id          String   @id @default(cuid())
-  type        String   // "income" or "expense"
+  type        String
   amount      Float
   category    String
   description String?
