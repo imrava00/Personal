@@ -17,9 +17,14 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600">
-                <span className="text-lg font-bold text-white">F</span>
-              </div>
+              <svg className="h-9 w-9" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="8" fill="url(#logoGrad)"/>
+                <path d="M10 12h6v12h-6z" fill="white" opacity="0.9"/>
+                <path d="M20 8h6v16h-6z" fill="white" opacity="0.9"/>
+                <path d="M10 20h6v4h-6z" fill="white" opacity="0.5"/>
+                <path d="M20 16h6v8h-6z" fill="white" opacity="0.5"/>
+                <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#10b981"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs>
+              </svg>
               <div>
                 <h1 className="text-lg font-bold tracking-tight">FinPlan</h1>
                 <p className="hidden text-xs text-muted-foreground sm:block">Personal Finance Hub</p>
@@ -80,7 +85,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col items-center justify-between gap-2 sm:flex-row">
             <p className="text-xs text-muted-foreground">FinPlan — Personal Finance Hub</p>
-            <p className="text-xs text-muted-foreground">All data stored locally on your device</p>
+            <p className="text-xs text-muted-foreground">Secure cloud-powered finance management</p>
           </div>
         </div>
       </footer>

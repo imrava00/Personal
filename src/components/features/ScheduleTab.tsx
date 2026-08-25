@@ -184,7 +184,7 @@ export default function ScheduleTab() {
               modifiersClassNames={{
                 hasSchedule: 'bg-primary/10 font-bold',
               }}
-              className="rounded-md border"
+              className="rounded-md border [--cell-size:--spacing(11)] text-sm [&_[data-slot=calendar]]:text-sm [&_.rdp-weekday]:text-xs [&_.rdp-day_button]:text-sm [&_.rdp-caption_label]:text-base"
             />
           </div>
           <div className="mt-6">

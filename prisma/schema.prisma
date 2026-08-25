@@ -22,7 +22,7 @@ model Schedule {
 
 model Transaction {
   id          String   @id @default(cuid())
-  type        String
+  type        String   // "income" or "expense"
   amount      Float
   category    String
   description String?
