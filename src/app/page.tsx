@@ -18,12 +18,13 @@ export default function Home() {
           <div className="flex h-16 items-center justify-between">
             <div className="flex items-center gap-3">
               <svg className="h-9 w-9" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="36" height="36" rx="8" fill="url(#logoGrad)"/>
-                <path d="M10 12h6v12h-6z" fill="white" opacity="0.9"/>
-                <path d="M20 8h6v16h-6z" fill="white" opacity="0.9"/>
-                <path d="M10 20h6v4h-6z" fill="white" opacity="0.5"/>
-                <path d="M20 16h6v8h-6z" fill="white" opacity="0.5"/>
-                <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#10b981"/><stop offset="1" stop-color="#0d9488"/></linearGradient></defs>
+                <rect width="36" height="36" rx="9" fill="url(#lg)"/>
+                <path d="M11 10h14v2.5H11z" fill="white" fill-opacity="0.95"/>
+                <path d="M11 16.5h9v2.5H11z" fill="white" fill-opacity="0.95"/>
+                <path d="M11 23h6v2.5H11z" fill="white" fill-opacity="0.6"/>
+                <circle cx="27" cy="25" r="4" fill="white" fill-opacity="0.25"/>
+                <path d="M25.5 25l1 1.5 2.5-3" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <defs><linearGradient id="lg" x1="0" y1="0" x2="36" y2="36" gradientUnits="userSpaceOnUse"><stop stop-color="#059669"/><stop offset="1" stop-color="#0f766e"/></linearGradient></defs>
               </svg>
               <div>
                 <h1 className="text-lg font-bold tracking-tight">FinPlan</h1>

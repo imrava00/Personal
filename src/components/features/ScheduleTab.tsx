@@ -11,7 +11,7 @@ import { Calendar } from '@/components/ui/calendar'
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
-import { CalendarDays, Plus, Trash2, Clock, CheckCircle2, Circle, ListFilter } from 'lucide-react'
+import { CalendarDays, Plus, Trash2, Clock, CheckCircle2, Circle, ListFilter, Edit } from 'lucide-react'
 import { format, isSameDay, parseISO } from 'date-fns'
 import { toast } from 'sonner'
 
@@ -173,7 +173,7 @@ export default function ScheduleTab() {
           <CardDescription>Select a date to view and manage schedules</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex justify-center">
+          <div className="w-full [&_[data-slot=calendar]]:w-full [&_.rdp-months]:w-full [&_.rdp-month]:w-full [&_.rdp-table]:w-full">
             <Calendar
               mode="single"
               selected={selectedDate}
@@ -184,7 +184,7 @@ export default function ScheduleTab() {
               modifiersClassNames={{
                 hasSchedule: 'bg-primary/10 font-bold',
               }}
-              className="rounded-md border [--cell-size:--spacing(11)] text-sm [&_[data-slot=calendar]]:text-sm [&_.rdp-weekday]:text-xs [&_.rdp-day_button]:text-sm [&_.rdp-caption_label]:text-base"
+              className="rounded-md border w-full [--cell-size:--spacing(11)] text-sm [&_.rdp-weekday]:text-xs [&_.rdp-day_button]:text-sm [&_.rdp-caption_label]:text-base"
             />
           </div>
           <div className="mt-6">
@@ -230,7 +230,7 @@ export default function ScheduleTab() {
                         </div>
                         <div className="flex items-center gap-1 shrink-0">
                           <Button variant="ghost" size="icon" className="h-7 w-7" onClick={() => startEdit(schedule)}>
-                            ✏️
+                            <Edit className="h-3.5 w-3.5" />
                           </Button>
                           <Button variant="ghost" size="icon" className="h-7 w-7 text-red-500 hover:text-red-700" onClick={() => handleDelete(schedule.id)}>
                             <Trash2 className="h-3.5 w-3.5" />
